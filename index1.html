@@ -382,8 +382,7 @@
           </div> -->
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" value="nat" name="cat"
-               role="tab"
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
                 aria-controls="pills-home" aria-selected="true">Domestic</a>
             </li>
             <li class="nav-item">
@@ -396,32 +395,27 @@
             </li> -->
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" value="inter" name="cat" aria-labelledby="pills-home-tab">
-         <form id="myForm">
-          <div class="form-group mb-5">
-            <input type="text" class="form-control" placeholder="City/Pincode">
-          </div>
-          <div class="form-group mb-5">
-            <input type="text" class="form-control" placeholder="Weight (in Grams)">
-          </div>
-          <div class="form-group mb-5">
-            <input type="text" class="form-control disable" placeholder="Price" id="price" readonly >
-          </div>
-          
-         </form>
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" placeholder="City/Pincode">
+              </div>
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" placeholder="City/Pincode">
+              </div>
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" placeholder="Weight">
+              </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <form id="myForm">
-                <div class="form-group mb-5">
-                  <input type="text" class="form-control" placeholder="City/Pincode">
-                </div>
-                <div class="form-group mb-5">
-                  <input type="number" class="form-control" placeholder="Weight (in Grams)">
-                </div>
-                <div class="form-group mb-5">
-                  <input type="text" class="form-control disable" placeholder="Price" id="price" readonly >
-                </div>
-               </form>
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" placeholder="City/Pincode">
+              </div>
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" placeholder="City/Pincode">
+              </div>
+              <div class="form-group mb-5">
+                <input type="text" class="form-control" placeholder="Weight">
+              </div>
             </div>
             <!-- <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
               <div class="form-group mb-5">
@@ -437,12 +431,7 @@
           </div>
 
           <!-- <small class="d-block mb-30">* Enter up to 25 tracking numbers, one per line.</small> -->
-          <div class="text-center">
-            <span id="price">
-                Your price 
-            </span>
-        </div>
-          <button class="btn btn__primary btn__hover3 mt-2" onclick="formSubmit()">Get Quote</button>
+          <button class="btn btn__primary btn__hover3 mt-2">Get Quote</button>
         </div><!-- /.request-form-body -->
       </div><!-- /.request-form -->
     </section><!-- /.slider -->
@@ -1878,38 +1867,7 @@
     </div><!-- /.module-search-container -->
 
   </div><!-- /.wrapper -->
-  <script>
-    function formSubmit() {
-  let form = document.getElementById("myForm");
-  let price = document.getElementById("price");
 
-  let category = form.cat.value;
-
-  let weight = form.weight.value;
-
-  let displayPrice = 0;
-
-  if (category == "nat") {
-    if (weight < 500 && weight >= 200) {
-      displayPrice = weight * 50;
-    } else if (weight < 1000 && weight >= 500) {
-      displayPrice = weight * 500;
-    } else if (weight < 2000 && weight >= 1000) {
-      displayPrice = weight * 5000;
-    }
-  } else {
-    if (weight < 500 && weight >= 200) {
-      displayPrice = weight * 20;
-    } else if (weight < 1000 && weight >= 200) {
-      displayPrice = weight * 200;
-    } else if (weight < 2000 && weight >= 1000) {
-      displayPrice = weight * 2000;
-    }
-  }
-
-  price.innerHTML = displayPrice;
-}
-</script>
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
