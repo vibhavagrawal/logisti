@@ -22,11 +22,12 @@ function nationalFormSubmit() {
       }
   
     
+      let hamara_msg= document.getElementById("hamara-msg");
+      // hamara_msg.value="$ "+displayPrice
+      hamara_msg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 3-4 days.</p>`
+    // form.price.value = displayPrice
 
-
-    form.price.value = displayPrice
-
-    msg.innerHTML = `on this pincode ${pincode} goods will deliver in 3-4 days.`
+    // msg.innerHTML = 
 
   
   
@@ -61,11 +62,39 @@ function nationalFormSubmit() {
 
 
 
+      let hamara_msgg= document.getElementById("hamara-msgg");
+      // hamara_msg.value="$ "+displayPrice
+      hamara_msgg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 7-9 days.</p>`
+    // form.price.value = displayPrice
+    // form.price.value = "$ "+displayPrice
 
-    form.price.value = displayPrice
-
-    msg.innerHTML = `on this pincode ${pincode} goods will deliver in 7-9 days.`
+    // msg.innerHTML = `on this pincode ${pincode} goods will deliver in 7-9 days.`
   
   }
 
 // alert('hi')
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  x.style.display="none";
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+}function myyFunction() {
+  var x = document.getElementById("myDIVV");
+  x.style.display="none";
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+}
+
+document.getElementById("get-quote-first").addEventListener("click", myFunction);
+document.getElementById("get-quote-second").addEventListener("click", myyFunction);
