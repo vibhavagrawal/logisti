@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-
 @media screen and (max-width: 1200px) {
   .request__form1 {
 	 position: static;
@@ -31,9 +30,9 @@
 	 */
 }
 }
-
- 
     #myDIV{
+      display: none;
+    } #myDIVV{
       display: none;
     }
     .nav-pills .nav-link.active,
@@ -361,23 +360,23 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12  d-none d-lg-block">
-            <div class="owl-thumbs thumbs-dots">
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal1">
+            <div class="owl-thumbs thumbs-dots" id="pills-tab" role="tablist">
+              <button class="owl-thumb-item" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" >
                 <i class="icon-elevator"></i>
                 <span>Warehousing <br> Services</span>
               </button>
 
               <!-- first section  -->
 
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal2">
+              <button class="owl-thumb-item" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
                 <i class="icon-airplane"></i>
                 <span>Air Freight<br> Services</span>
               </button>
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal3">
+              <button class="owl-thumb-item"  id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
                 <i class="icon-ship"></i>
                 <span>Ocean Freight<br> Services</span>
               </button>
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal4">
+              <button class="owl-thumb-item" id="pills-forth-tab" data-toggle="pill" href="#pills-forth" role="tab" aria-controls="pills-forth" aria-selected="false">
                 <i class="icon-truck"></i>
                 <span>Road Freight<br> Services</span>
               </button>
@@ -388,8 +387,8 @@
 
 
 
-
       <!-- d-none d-lg-block -->
+
       <div class="request__form1 ">
         <div class="request__form1-header d-flex align-items-center">
           <i class="icon-box"></i>
@@ -404,25 +403,37 @@
               <option>Shipment Type: 2</option>
             </select>
           </div> -->
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" value="nat"
-                name="cat" role="tab" aria-controls="pills-home" aria-selected="true">Domestic</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                aria-controls="pills-profile" aria-selected="false">International</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                aria-controls="pills-contact" aria-selected="false">Contact</a>
-            </li> -->
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" value="inter" name="cat"
-              aria-labelledby="pills-home-tab">
+          <div class="text-center">
+            <span class="btn btn__primary btn__hover3 mt-2" data-toggle="modal" data-target="#cardone" >Domestic </span>
+            <span class="btn btn__primary btn__hover3 mt-2" data-toggle="modal" data-target="#cardtwo" >International</span>
+          </div>
+    
 
-              <form id="nationalForm">
+
+
+          <!-- <small class="d-block mb-30">* Enter up to 25 tracking numbers, one per line.</small> -->
+
+
+        </div><!-- /.request-form-body -->
+      </div><!-- /.request-form -->
+    </section><!-- /.slider -->
+    <!-- Modal section  -->
+
+    <div class="modal fade" id="cardone" tabindex="-1" role="dialog" aria-labelledby="cardoneLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ecardoneLabel">Domestic</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <div class="container">
+           <div class="col-md-8 mx-auto">
+                   <div id="cardONE">
+              <form id="nationalForm ">
                 <div class="form-group mb-5" id="btn-need-to-hide-1">
                   <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
                 </div>
@@ -435,11 +446,14 @@
                 <span id="nationalMessage" class="my-2"> </span>
                 <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit();" id="get-quote-first">Get Quote</span>
               </form>
+            </div>
+            
             <div id="myDIV">
               <form >
                 <div class="form-group mb-5">
                   <label for="exampleInputEmail1">Your Approx. Cost</label>
                   <h2 id="hamara-msg"></h2>
+                  <h2> $ 975.00</h2>
                   <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
                 </div>
                 <!-- <div class="form-group mb-5">
@@ -447,40 +461,61 @@
                 </div>
                 <div class="form-group mb-5">
                   <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                  
                 </div> -->
                 
-                <span id="nationalMessage" class="my-2"> </span>
+                <span class="btn btn__primary btn__hover3 mt-2"><a href="http://WhatsApp.com" style="color: #FFF;"> Book On Whatsapp<i class="fa fa-whatsapp ml-2" aria-hidden="true"></i>
+                </a></span>
+                <!-- <span id="nationalMessage" class="my-2"> </span> -->
                 <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
               </form>
 
             </div>
             
-
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-              <form id="internationalForm">
-                <div class="form-group mb-5">
-                  <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
-                </div>
-                <div class="form-group mb-5">
-                  <input type="number" class="form-control" name="weight" placeholder="Weight (in Grams)">
-                </div>
-                <!-- <div class="form-group mb-5">
-                  <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
-                </div>
-                <span id="internationalMessage" class="my-2"> </span> -->
-                <span class="btn btn__primary btn__hover3 mt-2" onclick="internationalFormSubmit()" id="get-quote-second">Get Quote</span>
-
-
-
-              </form>
-
+           </div>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="cardtwo" tabindex="-1" role="dialog" aria-labelledby="cardtwoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cardtwoLabel">International</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="col-md-8 mx-auto">
+              <div id="cardTWO">
+                <form id="internationalForm">
+                  <div class="form-group mb-5">
+                    <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                  </div>
+                  <div class="form-group mb-5">
+                    <input type="number" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                  </div>
+                  <!-- <div class="form-group mb-5">
+                    <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
+                  </div>
+                  <span id="internationalMessage" class="my-2"> </span> -->
+                  <span class="btn btn__primary btn__hover3 mt-2" onclick="internationalFormSubmit()" id="get-quote-second">Get Quote</span>
+                </form>
+              </div>
               <div id="myDIVV">
                 <form >
                   <div class="form-group mb-5">
                     <label for="exampleInputEmail1">Your Approx. Cost</label>
-                    <h2 id="hamara-msgg"></h2>
+                    <h2 id="hamara-msg"></h2>
+                    <h2> $ 1975.00</h2>
                     <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
                   </div>
                   <!-- <div class="form-group mb-5">
@@ -488,110 +523,195 @@
                   </div>
                   <div class="form-group mb-5">
                     <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                    
                   </div> -->
                   
-                  <span id="nationalMessage" class="my-2"> </span>
+                  <span class="btn btn__primary btn__hover3 mt-2"><a href="http://WhatsApp.com" style="color: #FFF;"> Book On Whatsapp<i class="fa fa-whatsapp ml-2" aria-hidden="true"></i>
+                  </a></span>
+                  <!-- <span id="nationalMessage" class="my-2"> </span> -->
                   <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
                 </form>
   
               </div>
-              
             </div>
-
           </div>
-
-          <!-- <small class="d-block mb-30">* Enter up to 25 tracking numbers, one per line.</small> -->
-
-
-        </div><!-- /.request-form-body -->
-      </div><!-- /.request-form -->
-    </section><!-- /.slider -->
-    <!-- Modal section  -->
-    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Warehouse services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
     </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Air Frelight Services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ocean Freight Services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Road Freight Services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+
 
 
     <!-- ========================
       About 4
     =========================== -->
+
+
+
+    <section>
+      <div class="container">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show  " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <!-- ========================= 
+                 careers
+            =========================  -->
+            <h2>1</h2>
+            <section id="careers" class="careers bg-gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text-center mb-50">
+                      <span class="heading__subtitle">Join Our Team</span>
+                      <h2 class="heading__title">Current Openings</h2>
+                      <div class="divider__line divider__center"></div>
+                    </div><!-- /.heading -->
+                  </div><!-- /.col-lg-6 -->
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+                      data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+                      <!-- job item #1 -->
+                      <div class=" job-item">
+                        <div class="job__meta">
+                          <span class="job__type">Full Time</span>
+                          <span class="job__location">New York</span>
+                        </div>
+                        <h4 class="job__title">Chief Executive Officer</h4>
+                        <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                          their primary responsibilities include making major corporate decisions.</p>
+                        <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+                      </div><!-- /.job-item -->
+        
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </section><!-- /.careers -->
+        </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <h2>2</h2>
+            <!-- ========================= 
+                 careers
+            =========================  -->
+            <section id="careers" class="careers bg-gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text-center mb-50">
+                      <span class="heading__subtitle">Join Our Team</span>
+                      <h2 class="heading__title">Current Openings</h2>
+                      <div class="divider__line divider__center"></div>
+                    </div><!-- /.heading -->
+                  </div><!-- /.col-lg-6 -->
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+                      data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+                      <!-- job item #1 -->
+                      <div class=" job-item">
+                        <div class="job__meta">
+                          <span class="job__type">Full Time</span>
+                          <span class="job__location">New York</span>
+                        </div>
+                        <h4 class="job__title">Chief Executive Officer</h4>
+                        <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                          their primary responsibilities include making major corporate decisions.</p>
+                        <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+                      </div><!-- /.job-item -->
+        
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </section><!-- /.careers -->
+        </div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <h2>3</h2>
+            <!-- ========================= 
+                 careers
+            =========================  -->
+            <section id="careers" class="careers bg-gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text-center mb-50">
+                      <span class="heading__subtitle">Join Our Team</span>
+                      <h2 class="heading__title">Current Openings</h2>
+                      <div class="divider__line divider__center"></div>
+                    </div><!-- /.heading -->
+                  </div><!-- /.col-lg-6 -->
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+                      data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+                      <!-- job item #1 -->
+                      <div class=" job-item">
+                        <div class="job__meta">
+                          <span class="job__type">Full Time</span>
+                          <span class="job__location">New York</span>
+                        </div>
+                        <h4 class="job__title">Chief Executive Officer</h4>
+                        <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                          their primary responsibilities include making major corporate decisions.</p>
+                        <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+                      </div><!-- /.job-item -->
+        
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </section><!-- /.careers -->
+        </div>
+          <div class="tab-pane fade" id="pills-forth" role="tabpanel" aria-labelledby="pills-forth-tab">
+            <h2>4</h2>
+    <!-- ========================= 
+         careers
+    =========================  -->
+    <section id="careers" class="careers bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-50">
+              <span class="heading__subtitle">Join Our Team</span>
+              <h2 class="heading__title">Current Openings</h2>
+              <div class="divider__line divider__center"></div>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+              data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+              <!-- job item #1 -->
+              <div class=" job-item">
+                <div class="job__meta">
+                  <span class="job__type">Full Time</span>
+                  <span class="job__location">New York</span>
+                </div>
+                <h4 class="job__title">Chief Executive Officer</h4>
+                <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                  their primary responsibilities include making major corporate decisions.</p>
+                <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+              </div><!-- /.job-item -->
+
+            </div>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.careers -->
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
     <section id="about4" class="about about-2 about-4 pb-40">
       <div class="container">
         <div class="tab-content" id="pills-tabContent">
