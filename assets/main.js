@@ -19,9 +19,9 @@ function nationalFormSubmit() {
      else if (weight < 500 && weight >= 200) {
         displayPrice = weight * 50;
       } else if (weight < 1000 && weight >= 500) {
-        displayPrice = weight * 500;
-      } else if (weight < 2000 && weight >= 1000) {
-        displayPrice = weight * 5000;
+        displayPrice = weight * 50;
+      } else if (weight < 20000 && weight >= 1000) {
+        displayPrice = weight * 50;
       }
   
       document.getElementById("cardONE").style.display="None";
@@ -62,9 +62,9 @@ function nationalFormSubmit() {
       if (weight < 500 && weight >= 200) {
         displayPrice = weight * 80;
       } else if (weight < 1000 && weight >= 800) {
-        displayPrice = weight * 800;
-      } else if (weight < 2000 && weight >= 1000) {
-        displayPrice = weight * 8000;
+        displayPrice = weight * 80;
+      } else if (weight < 20000 && weight >= 1000) {
+        displayPrice = weight * 80;
       }
 
 
