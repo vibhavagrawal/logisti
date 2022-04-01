@@ -3,8 +3,11 @@ function nationalFormSubmit() {
     let msg = document.getElementById("nationalMessage");
   
     // let category = form.cat.value;
-    let pincode = form.pincode.value
-    let weight = form.weight.value;
+    // let pincode = form.pincode.value
+    let pincode = document.getElementById("pincode-2").value  // aaded new line
+    let weight = document.getElementById("weight-2").value  // aaded new line
+
+    // let weight = form.weight.value;
 
   
     let displayPrice = 0;
@@ -21,10 +24,14 @@ function nationalFormSubmit() {
         displayPrice = weight * 5000;
       }
   
-    
-      let hamara_msg= document.getElementById("hamara-msg");
+      document.getElementById("cardONE").style.display="None";
+      // document.getElementById("nationalForm").style.display="none";
+      // added new line
+
+      let hamara_msgg= document.getElementById("hamara-msgg");
       // hamara_msg.value="$ "+displayPrice
-      hamara_msg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 3-4 days.</p>`
+      // hamara_msgg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 3-4 days.</p>`
+      hamara_msgg.innerHTML="$ "+displayPrice
     // form.price.value = displayPrice
 
     // msg.innerHTML = 
@@ -40,7 +47,7 @@ function nationalFormSubmit() {
     let form = document.getElementById("internationalForm");
     let msg = document.getElementById("internationalMessage");
 
-    let pincode = form.pincode.value
+    let pincode = document.getElementById("pincode-1").value  // aaded new line
     let weight = form.weight.value;
   
     // let category = form.cat.value;
@@ -61,10 +68,11 @@ function nationalFormSubmit() {
       }
 
 
-
-      let hamara_msgg= document.getElementById("hamara-msgg");
+      document.getElementById("internationalForm").style.display="None"; // added new line
+      let hamara_msg= document.getElementById("hamara-msg"); //added new line
       // hamara_msg.value="$ "+displayPrice
-      hamara_msgg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 7-9 days.</p>`
+      hamara_msg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 7-9 days.</p>`
+
     // form.price.value = displayPrice
     // form.price.value = "$ "+displayPrice
 
@@ -76,31 +84,31 @@ function nationalFormSubmit() {
 
 function myFunction() {
   var x = document.getElementById("myDIV");
-  var y = document.getElementById("cardONE");
+  // var y = document.getElementById("cardONE");
   x.style.display="none";
   // y.style.display="block"
 
   if (x.style.display === "none") {
     x.style.display = "block";
-    y.style.display="none"
+    // y.style.display="none"
   } else {
     x.style.display = "none";
-    y.style.display="block"
+    // y.style.display="block"
   }
 
 }
 
 function myyFunction() {
   var x = document.getElementById("myDIVV");
-  var y = document.getElementById("cardTWO");
+  // var y = document.getElementById("cardTWO");
   x.style.display="none";
 
   if (x.style.display === "none") {
     x.style.display = "block";
-    y.style.display="none"
+    // y.style.display="none"
   } else {
     x.style.display = "none";
-    y.style.display="block"
+    // y.style.display="block"
   }
 
 }

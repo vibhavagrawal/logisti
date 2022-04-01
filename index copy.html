@@ -14,19 +14,36 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-
+@media screen and (max-width: 1200px) {
+  .request__form1 {
+	 position: static;
+	 margin-right: 0;
+	 width: 100%;
+	/* position: absolute;
+	 */
+	 top: -130px;
+	 left: 0;
+	 position: relative;
+	/* display: flex;
+	 */
+	/* justify-content: center;
+	 */
+}
+}
     #myDIV{
+      display: none;
+    } #myDIVV{
       display: none;
     }
     .nav-pills .nav-link.active,
     .nav-pills .show>.nav-link {
       color: #fff;
-      background-color: #ff5e14;
+      background-color: #F84208;
     }
 
     .nav-pills .nav-link {
       border-radius: 0.25rem;
-      background: #ff5e1454;
+      background: #F8420854;
       color: #000;
     }
 
@@ -95,7 +112,7 @@
           <div class="header__top-right d-none d-lg-block">
             <ul class="list-unstyled d-flex justify-content-end align-items-center">
               <li><i class="icon-phone"></i><span>+55 654 541 17</span></li>
-              <li>
+              <!-- <li>
                 <div class="dropdown">
                   <button class="btn dropdown-toggle width-auto" id="langDrobdown" data-toggle="dropdown">
                     <i class="icon-map"></i><span>En</span>
@@ -105,144 +122,13 @@
                     <a class="dropdown-item" href="#">France</a>
                   </div>
                 </div>
-              </li>
+              </li> -->
               <li><a href="request-quote.html" class="btn btn__white"><i class="icon-list"></i><span>Request A
                     Quote</span></a></li>
             </ul>
-          </div><!-- /.header-top-right -->
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav__item with-dropdown">
-                <a href="index.html" class="dropdown-toggle nav__item-link active">Home</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="index.html" class="nav__item-link">Home Main</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="home-modern.html" class="nav__item-link">Home Moderm</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="home-classic.html" class="nav__item-link">Home classic</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="about-us.html" class="nav__item-link">Company</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="about-us.html" class="nav__item-link">About Us</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="why-us.html" class="nav__item-link">Why Choose Us</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="leadership-team.html" class="nav__item-link">Leadership Team</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="global-locations.html" class="nav__item-link">Global Locations</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="gallery.html" class="nav__item-link">Our Gallery</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="careers.html" class="nav__item-link">careers</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="services.html" class="nav__item-link">Services</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu wide-dropdown-menu">
-                  <li class="nav__item">
-                    <div class="row mx-0">
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <h6>What We Do</h6>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Warehousing</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Air Freight</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Ocean Freight</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Road Freight</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Supply Chain</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Packaging</a></li>
-                          <!-- /.nav-item -->
-                        </ul>
-                      </div><!-- /.col-sm-6 -->
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <h6>Who We Serve</h6>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Retail &
-                              Consumer</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Sciences &
-                              Healthcare</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Industrial &
-                              Chemical</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Power
-                              Generation</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Food &
-                              Beverage</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Oil & Gas</a></li>
-                          <!-- /.nav-item -->
-                        </ul>
-                      </div><!-- /.col-sm-6 -->
-                    </div><!-- /.row -->
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="rates.html" class="nav__item-link">rates</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="case-studies-grid.html" class="nav__item-link">case studies</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="case-studies-default.html" class="nav__item-link">case studies
-                      default</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-grid.html" class="nav__item-link">case studies grid</a>
-                  </li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-carousel.html" class="nav__item-link">case studies
-                      carousel</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-single.html" class="nav__item-link">case study Single</a>
-                  </li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="blog-grid.html" class="nav__item-link">News & Media</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="blog-grid.html" class="nav__item-link">blog grid</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="blog-classic.html" class="nav__item-link">blog classic</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="blog-single-post.html" class="nav__item-link">blog single post</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="#" class="nav__item-link">Features</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="request-quote.html" class="nav__item-link">request a quote</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="track-shipment.html" class="nav__item-link">track and trace</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="find-location.html" class="nav__item-link">find Location</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="faqs.html" class="nav__item-link">help and faqs</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="contacs.html" class="nav__item-link">Contact Us</a>
-              </li><!-- /.nav-item -->
-            </ul><!-- /.navbar-nav -->
-          </div><!-- /.navbar-collapse -->
-          <div class="navbar-modules">
-            <div class="modules__wrapper d-flex align-items-center">
-              <a href="#" class="module__btn module__btn-search"><i class="fa fa-search"></i></a>
-            </div><!-- /.modules-wrapper -->
-          </div><!-- /.navbar-modules -->
+          </div>
+          <!-- /.header-top-right -->
+       
         </div><!-- /.container -->
       </nav><!-- /.navabr -->
     </header><!-- /.Header -->
@@ -343,23 +229,23 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12  d-none d-lg-block">
-            <div class="owl-thumbs thumbs-dots">
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal1">
+            <div class="owl-thumbs thumbs-dots" id="pills-tab" role="tablist">
+              <button class="owl-thumb-item" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" >
                 <i class="icon-elevator"></i>
                 <span>Warehousing <br> Services</span>
               </button>
 
               <!-- first section  -->
 
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal2">
+              <button class="owl-thumb-item" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
                 <i class="icon-airplane"></i>
                 <span>Air Freight<br> Services</span>
               </button>
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal3">
+              <button class="owl-thumb-item"  id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
                 <i class="icon-ship"></i>
                 <span>Ocean Freight<br> Services</span>
               </button>
-              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal4">
+              <button class="owl-thumb-item" id="pills-forth-tab" data-toggle="pill" href="#pills-forth" role="tab" aria-controls="pills-forth" aria-selected="false">
                 <i class="icon-truck"></i>
                 <span>Road Freight<br> Services</span>
               </button>
@@ -370,9 +256,9 @@
 
 
 
+      <!-- d-none d-lg-block -->
 
-
-      <div class="request__form1 d-none d-lg-block">
+      <div class="request__form1 ">
         <div class="request__form1-header d-flex align-items-center">
           <i class="icon-box"></i>
           <h4 class="request__form1-title">Request a Quote</h4>
@@ -386,30 +272,42 @@
               <option>Shipment Type: 2</option>
             </select>
           </div> -->
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" value="nat"
-                name="cat" role="tab" aria-controls="pills-home" aria-selected="true">Domestic</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                aria-controls="pills-profile" aria-selected="false">International</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                aria-controls="pills-contact" aria-selected="false">Contact</a>
-            </li> -->
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" value="inter" name="cat"
-              aria-labelledby="pills-home-tab">
-            <div id="cardONE">
+          <div class="text-center">
+            <span class="btn btn__primary btn__hover3 mt-2" data-toggle="modal" data-target="#cardone" >Domestic </span>
+            <span class="btn btn__primary btn__hover3 mt-2" data-toggle="modal" data-target="#cardtwo" >International</span>
+          </div>
+    
+
+
+
+          <!-- <small class="d-block mb-30">* Enter up to 25 tracking numbers, one per line.</small> -->
+
+
+        </div><!-- /.request-form-body -->
+      </div><!-- /.request-form -->
+    </section><!-- /.slider -->
+    <!-- Modal section  -->
+
+    <div class="modal fade" id="cardone" tabindex="-1" role="dialog" aria-labelledby="cardoneLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ecardoneLabel">Domestic</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <div class="container">
+           <div class="col-md-8 mx-auto">
+                   <div id="cardONE">
               <form id="nationalForm ">
                 <div class="form-group mb-5" id="btn-need-to-hide-1">
-                  <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                  <input type="text" class="form-control" id="pincode-2" name="pincode" placeholder="City/Pincode">
                 </div>
                 <div class="form-group mb-5" id="btn-need-to-hide-2">
-                  <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                  <input type="text" class="form-control" id="weight-2" name="weight" placeholder="Weight (in Grams)">
                 </div>
                 <!-- <div class="form-group mb-5">
                   <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
@@ -423,7 +321,8 @@
               <form >
                 <div class="form-group mb-5">
                   <label for="exampleInputEmail1">Your Approx. Cost</label>
-                  <h2 id="hamara-msg"></h2>
+                  <h2 id="hamara-msgg"></h2>
+                  <!-- <h2> $ 975.00</h2> -->
                   <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
                 </div>
                 <!-- <div class="form-group mb-5">
@@ -431,151 +330,257 @@
                 </div>
                 <div class="form-group mb-5">
                   <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                  
                 </div> -->
                 
-                <span id="nationalMessage" class="my-2"> </span>
+                <span class="btn btn__primary btn__hover3 mt-2"><a href="http://WhatsApp.com" style="color: #FFF;"> Book On Whatsapp<i class="fa fa-whatsapp ml-2" aria-hidden="true"></i>
+                </a></span>
+                <!-- <span id="nationalMessage" class="my-2"> </span> -->
                 <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
               </form>
 
             </div>
             
-
+           </div>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="cardtwo" tabindex="-1" role="dialog" aria-labelledby="cardtwoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cardtwoLabel">International</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="col-md-8 mx-auto">
+              <div id="cardTWO">
+                <form id="internationalForm">
+                  <div class="form-group mb-5">
+                    <input type="text" class="form-control" id="pincode-1" name="pincode" placeholder="City/Pincode">
+                  </div>
+                  <div class="form-group mb-5">
+                    <input type="number" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                  </div>
+                  <!-- <div class="form-group mb-5">
+                    <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
+                  </div>
+                  <span id="internationalMessage" class="my-2"> </span> -->
+                  <span class="btn btn__primary btn__hover3 mt-2" onclick="internationalFormSubmit()" id="get-quote-second">Get Quote</span>
+                </form>
+              </div>
+              <div id="myDIVV">
+                <form >
+                  <div class="form-group mb-5">
+                    <label for="exampleInputEmail1">Your Approx. Cost</label>
+                    <h2 id="hamara-msg"></h2>
+                    <!-- <h2> $ 1975.00</h2> -->
+                    <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
+                  </div>
+                  <!-- <div class="form-group mb-5">
+                    <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                  </div>
+                  <div class="form-group mb-5">
+                    <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                    
+                  </div> -->
+                  
+                  <span class="btn btn__primary btn__hover3 mt-2"><a href="http://WhatsApp.com" style="color: #FFF;"> Book On Whatsapp<i class="fa fa-whatsapp ml-2" aria-hidden="true"></i>
+                  </a></span>
+                  <!-- <span id="nationalMessage" class="my-2"> </span> -->
+                  <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
+                </form>
+  
+              </div>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-<div class="cardTWO">
-  <form id="internationalForm">
-    <div class="form-group mb-5">
-      <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
-    </div>
-    <div class="form-group mb-5">
-      <input type="number" class="form-control" name="weight" placeholder="Weight (in Grams)">
-    </div>
-    <!-- <div class="form-group mb-5">
-      <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
-    </div>
-    <span id="internationalMessage" class="my-2"> </span> -->
-    <span class="btn btn__primary btn__hover3 mt-2" onclick="internationalFormSubmit()" id="get-quote-second">Get Quote</span>
-  </form>
-
-</div>
-            
-<div id="myDIVV">
-  <form >
-    <div class="form-group mb-5">
-      <label>Your Approx. Cost</label>
-      <h2 id="hamara-msgg"></h2>
-      <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
-    </div>
-    <!-- <div class="form-group mb-5">
-      <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
-    </div>
-    <div class="form-group mb-5">
-      <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
-    </div> -->
-    
-    <span id="nationalMessage" class="my-2"> </span>
-    <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
-  </form>
-
-</div>
-        
-              
-            </div>
-
           </div>
-
-          <!-- <small class="d-block mb-30">* Enter up to 25 tracking numbers, one per line.</small> -->
-
-
-        </div><!-- /.request-form-body -->
-      </div><!-- /.request-form -->
-    </section><!-- /.slider -->
-    <!-- Modal section  -->
-    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Warehouse services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
     </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Air Frelight Services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ocean Freight Services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Road Freight Services</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+
 
 
     <!-- ========================
       About 4
     =========================== -->
+
+
+
+    <section>
+      <div class="container">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show  " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <!-- ========================= 
+                 careers
+            =========================  -->
+            <h2>1</h2>
+            <section id="careers" class="careers bg-gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text-center mb-50">
+                      <span class="heading__subtitle">Join Our Team</span>
+                      <h2 class="heading__title">Current Openings</h2>
+                      <div class="divider__line divider__center"></div>
+                    </div><!-- /.heading -->
+                  </div><!-- /.col-lg-6 -->
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+                      data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+                      <!-- job item #1 -->
+                      <div class=" job-item">
+                        <div class="job__meta">
+                          <span class="job__type">Full Time</span>
+                          <span class="job__location">New York</span>
+                        </div>
+                        <h4 class="job__title">Chief Executive Officer</h4>
+                        <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                          their primary responsibilities include making major corporate decisions.</p>
+                        <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+                      </div><!-- /.job-item -->
+        
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </section><!-- /.careers -->
+        </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <h2>2</h2>
+            <!-- ========================= 
+                 careers
+            =========================  -->
+            <section id="careers" class="careers bg-gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text-center mb-50">
+                      <span class="heading__subtitle">Join Our Team</span>
+                      <h2 class="heading__title">Current Openings</h2>
+                      <div class="divider__line divider__center"></div>
+                    </div><!-- /.heading -->
+                  </div><!-- /.col-lg-6 -->
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+                      data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+                      <!-- job item #1 -->
+                      <div class=" job-item">
+                        <div class="job__meta">
+                          <span class="job__type">Full Time</span>
+                          <span class="job__location">New York</span>
+                        </div>
+                        <h4 class="job__title">Chief Executive Officer</h4>
+                        <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                          their primary responsibilities include making major corporate decisions.</p>
+                        <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+                      </div><!-- /.job-item -->
+        
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </section><!-- /.careers -->
+        </div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <h2>3</h2>
+            <!-- ========================= 
+                 careers
+            =========================  -->
+            <section id="careers" class="careers bg-gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading text-center mb-50">
+                      <span class="heading__subtitle">Join Our Team</span>
+                      <h2 class="heading__title">Current Openings</h2>
+                      <div class="divider__line divider__center"></div>
+                    </div><!-- /.heading -->
+                  </div><!-- /.col-lg-6 -->
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+                      data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+                      <!-- job item #1 -->
+                      <div class=" job-item">
+                        <div class="job__meta">
+                          <span class="job__type">Full Time</span>
+                          <span class="job__location">New York</span>
+                        </div>
+                        <h4 class="job__title">Chief Executive Officer</h4>
+                        <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                          their primary responsibilities include making major corporate decisions.</p>
+                        <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+                      </div><!-- /.job-item -->
+        
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </section><!-- /.careers -->
+        </div>
+          <div class="tab-pane fade" id="pills-forth" role="tabpanel" aria-labelledby="pills-forth-tab">
+            <h2>4</h2>
+    <!-- ========================= 
+         careers
+    =========================  -->
+    <section id="careers" class="careers bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-50">
+              <span class="heading__subtitle">Join Our Team</span>
+              <h2 class="heading__title">Current Openings</h2>
+              <div class="divider__line divider__center"></div>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="carousel owl-carousel" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="true"
+              data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+              <!-- job item #1 -->
+              <div class=" job-item">
+                <div class="job__meta">
+                  <span class="job__type">Full Time</span>
+                  <span class="job__location">New York</span>
+                </div>
+                <h4 class="job__title">Chief Executive Officer</h4>
+                <p class="job__desc">A chief executive officer (CEO) is the highest-ranking executive in a company, and
+                  their primary responsibilities include making major corporate decisions.</p>
+                <a href="#" class="btn btn__secondary btn__link btn__underlined">Apply Now</a>
+              </div><!-- /.job-item -->
+
+            </div>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.careers -->
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
     <section id="about4" class="about about-2 about-4 pb-40">
       <div class="container">
         <div class="tab-content" id="pills-tabContent">
@@ -621,12 +626,12 @@
                 </div><!-- /.carousel -->
               </div><!-- /.col-lg-5 -->
               <div class="col-sm-12 col-md-7 col-lg-7">
-                <p class="heading__desc mb-30">Logisti Group is a representative logistics operator providing full range
+                <p class="heading__desc mb-30">Shigr Group is a representative logistics operator providing full range
                   of service in the sphere
                   of customs clearance and transport worldwide for any type of cargo.</p>
                 <p>We pride ourselves on providing the best transport and shipping services available allover the
                   world. Our skilled personnel, utilising the latest communications, tracking and processing software,
-                  combined with decades of experience! Through integrated supply chain solutions, Logisti drives
+                  combined with decades of experience! Through integrated supply chain solutions, Shigr drives
                   sustainable competitive advantages to some of Australia's largest companies.</p>
                 <img src="assets/images/about/singnture.png" alt="singnture" class="signature mb-30">
               </div><!-- /.col-lg-7 -->
@@ -1563,7 +1568,7 @@
               <!-- Testimonial #1 -->
               <div class=" testimonial-item">
                 <div class="testimonial__content">
-                  <p class="testimonial__desc">Logisti team is the best of the best, and expertly trained team members
+                  <p class="testimonial__desc">Shigr team is the best of the best, and expertly trained team members
                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                     environment.</p>
@@ -1572,7 +1577,7 @@
               <!-- Testimonial #2 -->
               <div class=" testimonial-item">
                 <div class="testimonial__content">
-                  <p class="testimonial__desc">Logisti team is the best of the best, and expertly trained team members
+                  <p class="testimonial__desc">Shigr team is the best of the best, and expertly trained team members
                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                     environment.</p>
@@ -1581,7 +1586,7 @@
               <!-- Testimonial #3 -->
               <div class=" testimonial-item">
                 <div class="testimonial__content">
-                  <p class="testimonial__desc">Logisti team is the best of the best, and expertly trained team members
+                  <p class="testimonial__desc">Shigr team is the best of the best, and expertly trained team members
                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                     environment.</p>
@@ -1732,7 +1737,7 @@
                     <div class="accordion__item-body">
                       <ul class="contact__list list-unstyled">
                         <li>002 010123456789</li>
-                        <li>Email: Logisti@Shigr.com</li>
+                        <li>Email: Shigr@Shigr.com</li>
                         <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
                         <li>Hours: Mon-Fri: 8am – 7pm</li>
                       </ul>
@@ -1747,7 +1752,7 @@
                     <div class="accordion__item-body">
                       <ul class="contact__list list-unstyled">
                         <li>002 010123456789</li>
-                        <li>Email: Logisti@Shigr.com</li>
+                        <li>Email: Shigr@Shigr.com</li>
                         <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
                         <li>Hours: Mon-Fri: 8am – 7pm</li>
                       </ul>
@@ -1762,7 +1767,7 @@
                     <div class="accordion__item-body">
                       <ul class="contact__list list-unstyled">
                         <li>002 010123456789</li>
-                        <li>Email: Logisti@Shigr.com</li>
+                        <li>Email: Shigr@Shigr.com</li>
                         <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
                         <li>Hours: Mon-Fri: 8am – 7pm</li>
                       </ul>
@@ -1773,7 +1778,7 @@
             </div><!-- /.contact-panel -->
           </div><!-- /.col-lg-4 -->
           <div class="col-sm-12 col-md-12 col-lg-3 text-right">
-            <h2 class="cta__title">Sign up for industry news and insights from Logisti.</h2>
+            <h2 class="cta__title">Sign up for industry news and insights from Shigr.</h2>
           </div><!-- /.col-lg-3 -->
           <div class="col-sm-12 col-md-12 col-lg-5">
             <form>
@@ -1884,7 +1889,7 @@
                     <li><a href="#">Employee login</a></li>
                   </ul>
                 </nav>
-                <span>&copy; 2019 Logisti, with Love by</span>
+                <span>&copy; 2019 Shigr, with Love by</span>
                 <a href="http://themeforest.net/user/Shigr">Shigr.com</a>
               </div><!-- /.Footer-copyright -->
             </div><!-- /.col-lg-6 -->
