@@ -71,7 +71,8 @@ function nationalFormSubmit() {
       document.getElementById("internationalForm").style.display="None"; // added new line
       let hamara_msg= document.getElementById("hamara-msg"); //added new line
       // hamara_msg.value="$ "+displayPrice
-      hamara_msg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 7-9 days.</p>`
+      // hamara_msg.innerHTML="$ "+displayPrice + `<br><p>on this pincode ${pincode} goods will deliver in 7-9 days.</p>`
+      hamara_msg.innerHTML="$ "+displayPrice 
 
     // form.price.value = displayPrice
     // form.price.value = "$ "+displayPrice
