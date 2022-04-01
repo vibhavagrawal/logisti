@@ -5,33 +5,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Logisti ">
+  <meta name="description" content="Shigr">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Logisti </title>
+  <title>shighr </title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:400,700%7cWork+Sans:400,600,700&display=swap">
   <link rel="stylesheet" href="assets/css/libraries.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
   <style>
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #ff5e14;
-}
 
-.nav-pills .nav-link {
-    border-radius: 0.25rem;
-    background: #ff5e1454;
-    color: #000;
-}
+    #myDIV{
+      display: none;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      color: #fff;
+      background-color: #ff5e14;
+    }
 
-/* .slider-8 .thumbs-dots .owl-thumb-item {
+    .nav-pills .nav-link {
+      border-radius: 0.25rem;
+      background: #ff5e1454;
+      color: #000;
+    }
+
+    /* .slider-8 .thumbs-dots .owl-thumb-item {
     flex: 1;
     text-align: left;
     padding: 25px 30px 23px;
     background-color: rgba(27, 26, 26, 0.5);
     margin-right: 2px;
 } */
-.modal-fullscreen .modal-content {
+    .modal-fullscreen .modal-content {
       height: 100%;
       border: 0;
       border-radius: 0;
@@ -344,16 +350,16 @@
               </button>
 
               <!-- first section  -->
-           
-              <button class="owl-thumb-item"  data-toggle="modal" data-target="#exampleModal2">
+
+              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal2">
                 <i class="icon-airplane"></i>
                 <span>Air Freight<br> Services</span>
               </button>
-              <button class="owl-thumb-item"  data-toggle="modal" data-target="#exampleModal3">
+              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal3">
                 <i class="icon-ship"></i>
                 <span>Ocean Freight<br> Services</span>
               </button>
-              <button class="owl-thumb-item"  data-toggle="modal" data-target="#exampleModal4">
+              <button class="owl-thumb-item" data-toggle="modal" data-target="#exampleModal4">
                 <i class="icon-truck"></i>
                 <span>Road Freight<br> Services</span>
               </button>
@@ -361,7 +367,7 @@
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
       </div><!-- /.container -->
-  
+
 
 
 
@@ -382,8 +388,8 @@
           </div> -->
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                aria-controls="pills-home" aria-selected="true">Domestic</a>
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" value="nat"
+                name="cat" role="tab" aria-controls="pills-home" aria-selected="true">Domestic</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
@@ -395,127 +401,172 @@
             </li> -->
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="City/Pincode">
-              </div>
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="City/Pincode">
-              </div>
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="Weight">
-              </div>
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" value="inter" name="cat"
+              aria-labelledby="pills-home-tab">
+
+              <form id="nationalForm">
+                <div class="form-group mb-5" id="btn-need-to-hide-1">
+                  <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                </div>
+                <div class="form-group mb-5" id="btn-need-to-hide-2">
+                  <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                </div>
+                <!-- <div class="form-group mb-5">
+                  <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
+                </div> -->
+                <span id="nationalMessage" class="my-2"> </span>
+                <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit();" id="get-quote-first">Get Quote</span>
+              </form>
+            <div id="myDIV">
+              <form >
+                <div class="form-group mb-5">
+                  <label for="exampleInputEmail1">Your Approx. Cost</label>
+                  <h2 id="hamara-msg"></h2>
+                  <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
+                </div>
+                <!-- <div class="form-group mb-5">
+                  <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                </div>
+                <div class="form-group mb-5">
+                  <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                </div> -->
+                
+                <span id="nationalMessage" class="my-2"> </span>
+                <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
+              </form>
+
+            </div>
+            
+
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="City/Pincode">
+
+              <form id="internationalForm">
+                <div class="form-group mb-5">
+                  <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                </div>
+                <div class="form-group mb-5">
+                  <input type="number" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                </div>
+                <!-- <div class="form-group mb-5">
+                  <input type="text" class="form-control disable" name="price" placeholder="Price" id="price" readonly>
+                </div>
+                <span id="internationalMessage" class="my-2"> </span> -->
+                <span class="btn btn__primary btn__hover3 mt-2" onclick="internationalFormSubmit()" id="get-quote-second">Get Quote</span>
+              </form>
+              <div id="myDIVV">
+                <form >
+                  <div class="form-group mb-5">
+                    <label>Your Approx. Cost</label>
+                    <h2 id="hamara-msgg"></h2>
+                    <!-- <input type="text" class="form-control disable" id="hamara-msg" name="price" placeholder="Price" id="price" readonly> -->
+                  </div>
+                  <!-- <div class="form-group mb-5">
+                    <input type="text" class="form-control" name="pincode" placeholder="City/Pincode">
+                  </div>
+                  <div class="form-group mb-5">
+                    <input type="text" class="form-control" name="weight" placeholder="Weight (in Grams)">
+                  </div> -->
+                  
+                  <span id="nationalMessage" class="my-2"> </span>
+                  <!-- <span class="btn btn__primary btn__hover3 mt-2" onclick="nationalFormSubmit(); ">Get Quote</span> -->
+                </form>
+        
               </div>
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="City/Pincode">
-              </div>
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="Weight">
-              </div>
+        
+        
+              
             </div>
-            <!-- <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="City/Pincode">
-              </div>
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="City/Pincode">
-              </div>
-              <div class="form-group mb-5">
-                <input type="text" class="form-control" placeholder="Weight">
-              </div>
-            </div> -->
+
           </div>
 
           <!-- <small class="d-block mb-30">* Enter up to 25 tracking numbers, one per line.</small> -->
-          <button class="btn btn__primary btn__hover3 mt-2">Get Quote</button>
+
+
         </div><!-- /.request-form-body -->
       </div><!-- /.request-form -->
     </section><!-- /.slider -->
-   <!-- Modal section  -->
-   <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-   aria-hidden="true">
-   <div class="modal-dialog modal-fullscreen" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Warehouse services</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         ...
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-       </div>
-     </div>
-   </div>
- </div>
-   <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-   aria-hidden="true">
-   <div class="modal-dialog modal-fullscreen" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Air Frelight Services</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         ...
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-       </div>
-     </div>
-   </div>
- </div>
-   <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-   aria-hidden="true">
-   <div class="modal-dialog modal-fullscreen" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Ocean Freight Services</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         ...
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-       </div>
-     </div>
-   </div>
- </div>
-   <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-   aria-hidden="true">
-   <div class="modal-dialog modal-fullscreen" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Road Freight Services</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         ...
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-       </div>
-     </div>
-   </div>
- </div>
+    <!-- Modal section  -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Warehouse services</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Air Frelight Services</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ocean Freight Services</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Road Freight Services</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- ========================
@@ -524,7 +575,8 @@
     <section id="about4" class="about about-2 about-4 pb-40">
       <div class="container">
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">warehouse</div>
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            warehouse</div>
           <div class="tab-pane fade" id="pills-profil" role="tabpanel" aria-labelledby="pills-profil-tab">air</div>
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Ocean</div>
           <div class="tab-pane fade" id="pills-ship" role="tabpanel" aria-labelledby="pills-ship-tab">road</div>
@@ -659,18 +711,7 @@
                     <i class="icon-worldwide"></i>
                     <h4 class="request__form-title">Track & Trace</h4>
                   </div><!-- /.request-form-header -->
-                </a> <a class="nav__link " data-toggle="tab" href="#quote">
-                  <div class="request__form-header d-flex align-items-center">
-                    <i class="icon-box"></i>
-                    <h4 class="request__form-title">Request A Quote</h4>
-                  </div><!-- /.request-form-header -->
-                </a>
-                <a class="nav__link" data-toggle="tab" href="#track">
-                  <div class="request__form-header d-flex align-items-center">
-                    <i class="icon-worldwide"></i>
-                    <h4 class="request__form-title">Track & Trace</h4>
-                  </div><!-- /.request-form-header -->
-                </a>
+                </a> 
               </nav>
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="quote">
@@ -1499,7 +1540,6 @@
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.Carousel Tabs  -->
-
     <!-- ========================= 
             Testimonial #2
     =========================  -->
@@ -1867,6 +1907,9 @@
     </div><!-- /.module-search-container -->
 
   </div><!-- /.wrapper -->
+
+
+  <script src="assets/main.js"> </script>
 
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
