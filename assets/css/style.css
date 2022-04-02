@@ -1989,7 +1989,9 @@ textarea.form-control {
   /*  dropdown-menu  */
 }
 
-.navbar>.container,
+.navbar>.container{
+  justify-content: flex-start;
+}
 .navbar>.container-fluid {
   position: relative;
   height: 135px;
@@ -3246,6 +3248,25 @@ textarea.form-control {
   margin-bottom: 26px;
 }
 
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:120px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
 .footer__widget-nav li a,
 .footer__copyright-links li a {
   display: block;
@@ -3278,8 +3299,9 @@ textarea.form-control {
 }
 
 .footer-bottom {
-  padding: 35px 0;
-  border-top: 1px solid #eaeaea;
+  padding: 10px 10px;
+    border-top: 1px solid #eaeaea;
+  width: 58vw;
 }
 
 .footer-bottom .social__icons a {
